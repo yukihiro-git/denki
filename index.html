@@ -22,11 +22,11 @@
             background-color: var(--background-color);
             color: var(--text-main);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            /* バナーの高さ分だけ上部に余白を設ける */
             padding: 80px 20px 20px 20px;
             box-sizing: border-box;
             line-height: 1.6;
@@ -38,7 +38,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #e67e22; /* 注意を引くオレンジ色 */
+            background-color: #e67e22;
             color: #ffffff;
             text-align: center;
             padding: 12px 20px;
@@ -58,6 +58,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
             position: relative;
+            margin-bottom: 20px; /* フッターとの余白 */
         }
 
         .header {
@@ -275,6 +276,15 @@
             color: white;
         }
 
+        /* フッターのスタイル */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: #888;
+            width: 100%;
+        }
+
         .fade-in { animation: fadeIn 0.4s; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -349,6 +359,10 @@
             <button class="btn-reset" onclick="resetApp()">最初から判定する</button>
         </div>
     </div>
+</div>
+
+<div class="footer">
+    &copy; 2026 Yukihiro Oki. All rights reserved.
 </div>
 
 <script>
@@ -525,5 +539,3 @@
 
 </body>
 </html>
-
-
